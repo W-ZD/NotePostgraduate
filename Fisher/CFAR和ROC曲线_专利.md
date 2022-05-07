@@ -52,13 +52,17 @@
     </tr>
     <tr>
         <td>正例</td> 
-        <td>TP（真正例）</td> 
-        <td>FN（假反例）</td> 
+        <td>TP（真正例）(目标检测为目标)</td> 
+        <td>FN（假反例）(漏检)</td> 
     </tr>
     <tr>
         <td>反例</td> 
-        <td>FP（假正例）</td> 
-        <td>TN（真反例）</td> 
+        <td>FP（假正例）(虚警)</td> 
+        <td>TN（真反例）(海面)</td> 
     </tr>
 </table>
 </div>
+
+## 查准率P和查全率R
+$P = \frac{TP}{TP + FP}$
+$R = \frac{TP}{TP + FN}$
