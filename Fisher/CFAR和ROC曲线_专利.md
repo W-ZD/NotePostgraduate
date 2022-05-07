@@ -26,3 +26,39 @@
 
 
 # ROC曲线
+## 混淆矩阵
+<!-- | 真实情况 |  |  预测结果|
+| ---- | ---- | ---- |
+| ^ | 正例 | 反例 |
+| 正例 |  |  |
+| ---- || |
+| 反例 |
+
+|  表头   | 表头  |
+|  ----  | ----  |
+| 单元格  | 单元格 |
+| 单元格  | 单元格 | -->
+<div style="text-align: center;">
+<table style="margin: auto">
+    <tr> 
+        <td rowspan = "2">真实情况</td> 
+        <td colspan="2"> 预测结果 </td> 
+        <!-- <td>⾏1列3</td>  -->
+   </tr>
+    <tr>
+    <td>正例</td> 
+        <td>反例</td> 
+        <!-- <td>⾏2列3</td>  -->
+    </tr>
+    <tr>
+        <td>正例</td> 
+        <td>TP（真正例）</td> 
+        <td>FN（假反例）</td> 
+    </tr>
+    <tr>
+        <td>反例</td> 
+        <td>FP（假正例）</td> 
+        <td>TN（真反例）</td> 
+    </tr>
+</table>
+</div>
