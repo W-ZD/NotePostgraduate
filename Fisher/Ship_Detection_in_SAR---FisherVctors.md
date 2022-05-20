@@ -98,13 +98,18 @@ $\delta$ 表示像素点的强度 $w_n$ 表示mixture weight的一个权值？ �
   * 该超像素没有被异常超像素影响；
   
   > 条件1)在不失一般性的前提下，我们设置$M = 5 * S$，以保证外窗边长大于测试超像素的大小;
+  
   > 条件2)当测试超像素只是大型舰船目标的一部分时,保证背景超像素集仍然是纯的。
+  
   > 条件3)与海杂波和拥挤目标场景有关，其中局部背景可能存在一些异常超像素。这里，异常超像素被定义为具有异常强度的超像素。对于第p个检验超像素，首先找到满足条件1)和2)的超像素，如果其平均强度在区间$\left[ V_{p,min},V_{p,max} \right] $之外，则通过剔除异常值进行细化，其中
   
-  $ V_{p,min} = \overline{\mu}_p - 2  \overline{\sigma}_p $
-  $ V_{p,max} = \overline{\mu}_p + 2  \overline{\sigma}_p $
+  $V_{p,min} = \overline{\mu}_p - 2  \overline{\sigma}_p$
+    
+  $V_{p,max} = \overline{\mu}_p + 2  \overline{\sigma}_p$
   
-  $\overline{\mu}$ 和 $\overline{\sigma}$分别代表满足条件1)和2)的超像素所包含的所有像素强度的平均值和标准差。这里上式有一个95%的置信区间，相信在$\left[ V_{p,min},V_{p,max} \right] $具有平均强度的超像素不是异常值。
+  $\overline{\mu}$ 和 $\overline{\sigma}$分别代表满足条件1)和2)的超像素所包含的所有像素强度的平均值和标准差。
+  
+  这里上式有一个95%的置信区间，相信在 $\left[ V_{p,min},V_{p,max} \right]$ 具有平均强度的超像素不是异常值。
   
   * 令$ \Theta_p $ 为图像中第p个代检验超像素的满足条件的超像素集合，我们可以这样构造第P个超像素点的BCD的FVs向量
   
